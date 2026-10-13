@@ -97,6 +97,7 @@
     btn.setAttribute('aria-label', 'Add a GIF');
     btn.setAttribute('aria-haspopup', 'dialog');
     btn.setAttribute('aria-expanded', 'false');
+    btn.style.setProperty('--gcfy-icon', `url("${chrome.runtime.getURL('icons/icon.svg')}")`);
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
