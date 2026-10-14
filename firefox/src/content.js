@@ -127,9 +127,9 @@
   function buildPicker() {
     const host = document.createElement('div');
     const root = host.attachShadow({ mode: 'open' });
-    const sheet = new CSSStyleSheet();
-    sheet.replaceSync(PICKER_CSS);
-    root.adoptedStyleSheets = [sheet];
+    const style = document.createElement('style');
+    style.textContent = PICKER_CSS;
+    root.append(style);
 
     const panel = document.createElement('div');
     panel.className = 'panel';
